@@ -1,0 +1,383 @@
+/* 服务介绍页面样式 */
+
+/* 页面头部 */
+.page-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 60px 0 80px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.page-hero .breadcrumb {
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.page-hero .breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.page-hero .breadcrumb a:hover {
+    color: #ffffff;
+}
+
+.page-hero .breadcrumb .current {
+    color: #ffffff;
+}
+
+.page-hero .breadcrumb span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.page-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* 服务标签筛选 */
+.service-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* 服务列表 */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-item {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    background: var(--bg-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.service-item:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+.service-item.hidden {
+    display: none;
+}
+
+.service-item-image {
+    position: relative;
+    height: 100%;
+    min-height: 250px;
+}
+
+.service-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.service-badge.recommend {
+    background: var(--secondary-color);
+}
+
+.service-badge.premium {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.service-item-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.service-item-header h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.service-item-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.service-item-desc {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.service-item-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.feature-tag {
+    background: var(--bg-light);
+    color: var(--text-light);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.service-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-duration {
+    color: var(--text-lighter);
+    font-size: 14px;
+}
+
+/* 套餐对比表格 */
+.comparison-table-wrapper {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 18px 25px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+    background: var(--bg-light);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table .check {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.comparison-table .cross {
+    color: var(--text-lighter);
+    font-size: 18px;
+}
+
+.comparison-table .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.comparison-table .popular-price {
+    color: var(--secondary-color);
+}
+
+.comparison-table .btn {
+    padding: 8px 25px;
+    font-size: 14px;
+}
+
+/* 服务承诺 */
+.guarantee-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.guarantee-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--bg-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.guarantee-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.guarantee-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.guarantee-icon svg {
+    width: 35px;
+    height: 35px;
+    color: #ffffff;
+}
+
+.guarantee-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.guarantee-item p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* 响应式样式 */
+@media (max-width: 1024px) {
+    .service-item {
+        grid-template-columns: 280px 1fr;
+    }
+
+    .guarantee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 28px;
+    }
+
+    .service-item {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item-image {
+        min-height: 200px;
+    }
+
+    .service-item-content {
+        padding: 20px;
+    }
+
+    .service-item-header h3 {
+        font-size: 18px;
+    }
+
+    .service-item-price {
+        font-size: 20px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .guarantee-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-tabs {
+        gap: 10px;
+    }
+
+    .tab-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    .service-item-features {
+        gap: 8px;
+    }
+
+    .feature-tag {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .service-item-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .service-item-footer .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

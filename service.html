@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="萌宠美容 - 服务介绍">
+    <title>服务介绍 - 萌宠美容</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/service.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/04.png" alt="萌宠美容">
+                    <span class="logo-text">萌宠美容</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="service.html" class="active">服务介绍</a></li>
+                    <li><a href="store.html">门店信息</a></li>
+                    <li><a href="message.html">留言咨询</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="切换导航菜单">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a>
+                    <span>/</span>
+                    <span class="current">服务介绍</span>
+                </div>
+                <h1 class="page-title">服务介绍</h1>
+                <p class="page-subtitle">为您的爱宠提供全方位的专业美容护理服务</p>
+            </div>
+        </section>
+
+        <section class="services-overview section-padding">
+            <div class="container">
+                <div class="service-tabs">
+                    <button class="tab-btn active" data-tab="all">全部服务</button>
+                    <button class="tab-btn" data-tab="bath">宠物洗澡</button>
+                    <button class="tab-btn" data-tab="styling">造型修剪</button>
+                    <button class="tab-btn" data-tab="spa">SPA护理</button>
+                    <button class="tab-btn" data-tab="nail">指甲修剪</button>
+                </div>
+
+                <div class="services-list" id="services-list">
+                    <div class="service-item" data-category="bath">
+                        <div class="service-item-image">
+                            <img src="images/1.jpg" alt="宠物洗澡">
+                            <div class="service-badge">热门</div>
+                        </div>
+                        <div class="service-item-content">
+                            <div class="service-item-header">
+                                <h3>宠物洗澡</h3>
+                                <span class="service-item-price">¥68起</span>
+                            </div>
+                            <p class="service-item-desc">温和洗护，深层清洁，让宠物焕然一新。我们使用专业宠物洗护产品，确保宠物的皮肤和毛发健康。</p>
+                            <div class="service-item-features">
+                                <span class="feature-tag">进口洗护产品</span>
+                                <span class="feature-tag">专业美容师</span>
+                                <span class="feature-tag">温柔安抚</span>
+                                <span class="feature-tag">免费吹干</span>
+                            </div>
+                            <div class="service-item-footer">
+                                <span class="service-duration">约60分钟</span>
+                                <a href="service-detail.html?type=bath" class="btn btn-primary">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-category="styling">
+                        <div class="service-item-image">
+                            <img src="images/2.jpg" alt="造型修剪">
+                            <div class="service-badge recommend">推荐</div>
+                        </div>
+                        <div class="service-item-content">
+                            <div class="service-item-header">
+                                <h3>造型修剪</h3>
+                                <span class="service-item-price">¥128起</span>
+                            </div>
+                            <p class="service-item-desc">专业造型设计，打造萌宠专属风格。根据宠物品种特点和主人需求，量身定制最适合的造型方案。</p>
+                            <div class="service-item-features">
+                                <span class="feature-tag">专业造型师</span>
+                                <span class="feature-tag">量身定制</span>
+                                <span class="feature-tag">专业工具</span>
+                                <span class="feature-tag">免费护理</span>
+                            </div>
+                            <div class="service-item-footer">
+                                <span class="service-duration">约90分钟</span>
+                                <a href="service-detail.html?type=styling" class="btn btn-primary">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-category="spa">
+                        <div class="service-item-image">
+                            <img src="images/3.jpg" alt="SPA护理">
+                            <div class="service-badge premium">尊享</div>
+                        </div>
+                        <div class="service-item-content">
+                            <div class="service-item-header">
+                                <h3>SPA护理</h3>
+                                <span class="service-item-price">¥168起</span>
+                            </div>
+                            <p class="service-item-desc">深层滋养护理，呵护宠物皮毛健康。采用天然精油和专业护理产品，让宠物享受全方位的放松体验。</p>
+                            <div class="service-item-features">
+                                <span class="feature-tag">天然精油</span>
+                                <span class="feature-tag">专业按摩</span>
+                                <span class="feature-tag">皮毛修复</span>
+                                <span class="feature-tag">舒缓压力</span>
+                            </div>
+                            <div class="service-item-footer">
+                                <span class="service-duration">约120分钟</span>
+                                <a href="service-detail.html?type=spa" class="btn btn-primary">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-category="nail">
+                        <div class="service-item-image">
+                            <img src="images/4.jpg" alt="指甲修剪">
+                        </div>
+                        <div class="service-item-content">
+                            <div class="service-item-header">
+                                <h3>指甲修剪</h3>
+                                <span class="service-item-price">¥38起</span>
+                            </div>
+                            <p class="service-item-desc">精细修剪，保护宠物行走健康。定期修剪指甲可以防止宠物抓伤家具和自己，保持行走舒适。</p>
+                            <div class="service-item-features">
+                                <span class="feature-tag">专业工具</span>
+                                <span class="feature-tag">温柔操作</span>
+                                <span class="feature-tag">精细打磨</span>
+                                <span class="feature-tag">健康检查</span>
+                            </div>
+                            <div class="service-item-footer">
+                                <span class="service-duration">约20分钟</span>
+                                <a href="service-detail.html?type=nail" class="btn btn-primary">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-category="bath">
+                        <div class="service-item-image">
+                            <img src="images/1.jpg" alt="药浴护理">
+                        </div>
+                        <div class="service-item-content">
+                            <div class="service-item-header">
+                                <h3>药浴护理</h3>
+                                <span class="service-item-price">¥158起</span>
+                            </div>
+                            <p class="service-item-desc">针对宠物皮肤问题，采用专业药浴配方，有效改善皮肤状况，缓解瘙痒、脱毛等问题。</p>
+                            <div class="service-item-features">
+                                <span class="feature-tag">专业药浴</span>
+                                <span class="feature-tag">改善皮肤</span>
+                                <span class="feature-tag">缓解瘙痒</span>
+                                <span class="feature-tag">促进毛发生长</span>
+                            </div>
+                            <div class="service-item-footer">
+                                <span class="service-duration">约90分钟</span>
+                                <a href="service-detail.html?type=bath" class="btn btn-primary">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-item" data-category="styling">
+                        <div class="service-item-image">
+                            <img src="images/2.jpg" alt="赛级造型">
+                            <div class="service-badge premium">尊享</div>
+                        </div>
+                        <div class="service-item-content">
+                            <div class="service-item-header">
+                                <h3>赛级造型</h3>
+                                <span class="service-item-price">¥298起</span>
+                            </div>
+                            <p class="service-item-desc">专业赛级造型设计，符合国际犬展标准。由资深美容师操刀，让您的爱宠成为焦点。</p>
+                            <div class="service-item-features">
+                                <span class="feature-tag">赛级标准</span>
+                                <span class="feature-tag">资深美容师</span>
+                                <span class="feature-tag">国际标准</span>
+                                <span class="feature-tag">全程护理</span>
+                            </div>
+                            <div class="service-item-footer">
+                                <span class="service-duration">约150分钟</span>
+                                <a href="service-detail.html?type=styling" class="btn btn-primary">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-comparison section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">套餐对比</h2>
+                <p class="section-subtitle">选择最适合您爱宠的护理方案</p>
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>服务项目</th>
+                                <th>基础套餐</th>
+                                <th>标准套餐</th>
+                                <th>尊享套餐</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>全身洗澡</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>基础吹干</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>专业造型</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>指甲修剪</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>脚底毛修剪</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>SPA精油护理</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>牙齿清洁</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td>价格</td>
+                                <td class="price">¥68</td>
+                                <td class="price popular-price">¥128</td>
+                                <td class="price">¥198</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="message.html?package=basic" class="btn btn-outline">选择</a></td>
+                                <td><a href="message.html?package=standard" class="btn btn-primary">选择</a></td>
+                                <td><a href="message.html?package=premium" class="btn btn-outline">选择</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-guarantee section-padding">
+            <div class="container">
+                <h2 class="section-title">服务承诺</h2>
+                <p class="section-subtitle">我们致力于为您提供最优质的服务体验</p>
+                <div class="guarantee-grid">
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>安全保障</h3>
+                        <p>全程监控，专业操作，确保宠物安全</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>温柔呵护</h3>
+                        <p>温柔对待每一只宠物，让它们安心舒适</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3>准时交付</h3>
+                        <p>严格按照预约时间，准时交付爱宠</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                                <polyline points="17 6 23 6 23 12"/>
+                            </svg>
+                        </div>
+                        <h3>满意保证</h3>
+                        <p>不满意可免费返工，直到您满意为止</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section-padding">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>立即预约，享受专业服务</h2>
+                    <p>专业美容师团队，为您的爱宠提供贴心呵护</p>
+                    <a href="message.html" class="btn btn-white">立即预约</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>萌宠美容</h3>
+                    <p>专业宠物美容服务，为您的爱宠提供全方位的美容护理，让每一只宠物都能展现最美的一面。</p>
+                </div>
+                <div class="footer-links">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="service.html">服务介绍</a></li>
+                        <li><a href="store.html">门店信息</a></li>
+                        <li><a href="message.html">留言咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p>电话：400-888-8888</p>
+                    <p>地址：湖南幼儿师范高等专科学校</p>
+                    <p>营业时间：9:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 萌宠美容 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/service.js"></script>
+</body>
+</html>

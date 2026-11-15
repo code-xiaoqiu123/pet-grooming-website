@@ -1,0 +1,326 @@
+/* 平板设备 */
+@media screen and (max-width: 1024px) {
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carousel-content h2 {
+        font-size: 36px;
+    }
+
+    .carousel-content {
+        padding: 30px 40px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-about {
+        grid-column: 1 / -1;
+    }
+}
+
+/* 手机设备 */
+@media screen and (max-width: 768px) {
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-subtitle {
+        margin-bottom: 30px;
+    }
+
+    /* 导航 */
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 0;
+        box-shadow: var(--shadow);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+    }
+
+    .nav-list.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-list a:last-child {
+        border-bottom: none;
+    }
+
+    /* 轮播图 */
+    .hero-carousel {
+        height: 350px;
+    }
+
+    .carousel-content {
+        padding: 20px 30px;
+        width: 90%;
+    }
+
+    .carousel-content h2 {
+        font-size: 24px;
+    }
+
+    .carousel-content p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .carousel-prev {
+        left: 10px;
+    }
+
+    .carousel-next {
+        right: 10px;
+    }
+
+    /* 优势展示 */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .advantage-card {
+        padding: 20px;
+    }
+
+    /* 热门服务 */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-image {
+        height: 180px;
+    }
+
+    /* CTA */
+    .cta-content h2 {
+        font-size: 26px;
+    }
+
+    .cta-content p {
+        font-size: 16px;
+    }
+
+    /* 页脚 */
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* 留言咨询页面响应式 */
+@media screen and (max-width: 1024px) {
+    .message-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-info-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contact-card,
+    .wechat-card,
+    .tips-card {
+        flex: 1;
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-title {
+        font-size: 28px;
+    }
+
+    .message-form-wrapper {
+        padding: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .contact-info-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-card,
+    .wechat-card,
+    .tips-card {
+        min-width: 100%;
+    }
+}
+
+/* 服务介绍页面响应式 */
+@media screen and (max-width: 1024px) {
+    .service-item {
+        grid-template-columns: 280px 1fr;
+    }
+
+    .guarantee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-title {
+        font-size: 28px;
+    }
+
+    .service-item {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item-image {
+        min-height: 200px;
+    }
+
+    .service-item-content {
+        padding: 20px;
+    }
+
+    .service-item-header h3 {
+        font-size: 18px;
+    }
+
+    .service-item-price {
+        font-size: 20px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .guarantee-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* 小屏手机 */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .hero-carousel {
+        height: 280px;
+    }
+
+    .carousel-content {
+        padding: 15px 20px;
+    }
+
+    .carousel-content h2 {
+        font-size: 20px;
+    }
+
+    .carousel-content p {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .btn-large {
+        padding: 12px 30px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .cta-content h2 {
+        font-size: 22px;
+    }
+
+    .service-tabs {
+        gap: 10px;
+    }
+
+    .tab-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    .service-item-features {
+        gap: 8px;
+    }
+
+    .feature-tag {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .service-item-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .service-item-footer .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

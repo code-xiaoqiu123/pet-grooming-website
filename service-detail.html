@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="萌宠美容 - 服务详情">
+    <title>服务详情 - 萌宠美容</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/service-detail.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/04.png" alt="萌宠美容">
+                    <span class="logo-text">萌宠美容</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="service.html" class="active">服务介绍</a></li>
+                    <li><a href="store.html">门店信息</a></li>
+                    <li><a href="message.html">留言咨询</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="切换导航菜单">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a>
+                    <span>/</span>
+                    <a href="service.html">服务介绍</a>
+                    <span>/</span>
+                    <span class="current" id="breadcrumb-service">服务详情</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-detail section-padding">
+            <div class="container">
+                <div class="service-detail-grid">
+                    <div class="service-gallery">
+                        <div class="main-image">
+                            <img id="main-service-image" src="images/1.jpg" alt="服务图片">
+                        </div>
+                        <div class="thumbnail-list" id="thumbnail-list">
+                            <img src="images/1.jpg" alt="缩略图1" class="thumb active" data-index="0">
+                            <img src="images/2.jpg" alt="缩略图2" class="thumb" data-index="1">
+                            <img src="images/3.jpg" alt="缩略图3" class="thumb" data-index="2">
+                            <img src="images/4.jpg" alt="缩略图4" class="thumb" data-index="3">
+                        </div>
+                    </div>
+
+                    <div class="service-info-panel">
+                        <h1 class="service-title" id="service-title">宠物洗澡</h1>
+                        <div class="service-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (128条评价)</span>
+                        </div>
+                        <div class="service-price-box">
+                            <span class="current-price" id="service-price">¥68起</span>
+                            <span class="original-price">¥98</span>
+                            <span class="discount-tag">限时优惠</span>
+                        </div>
+                        <p class="service-desc" id="service-desc">温和洗护，深层清洁，让宠物焕然一新。我们使用专业宠物洗护产品，确保宠物的皮肤和毛发健康。</p>
+                        
+                        <div class="service-features">
+                            <h3>服务特色</h3>
+                            <ul id="service-features-list">
+                                <li>使用进口天然洗护产品</li>
+                                <li>专业美容师一对一服务</li>
+                                <li>全程温柔安抚，宠物更安心</li>
+                                <li>洗护后免费吹干造型</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-duration">
+                            <span class="label">服务时长：</span>
+                            <span class="value" id="service-duration">约60分钟</span>
+                        </div>
+
+                        <div class="service-actions">
+                            <a href="message.html" class="btn btn-primary btn-large">立即预约</a>
+                            <a href="tel:400-888-8888" class="btn btn-outline btn-large">电话咨询</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-packages section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">服务套餐</h2>
+                <p class="section-subtitle">选择适合您爱宠的护理套餐</p>
+                <div class="packages-grid" id="packages-grid">
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>基础套餐</h3>
+                            <span class="package-price">¥68</span>
+                        </div>
+                        <ul class="package-features">
+                            <li>全身洗澡</li>
+                            <li>基础吹干</li>
+                            <li>耳朵清洁</li>
+                            <li>肛门腺清理</li>
+                        </ul>
+                        <a href="message.html" class="btn btn-outline">选择此套餐</a>
+                    </div>
+                    <div class="package-card popular">
+                        <div class="popular-tag">人气推荐</div>
+                        <div class="package-header">
+                            <h3>标准套餐</h3>
+                            <span class="package-price">¥128</span>
+                        </div>
+                        <ul class="package-features">
+                            <li>全身洗澡</li>
+                            <li>专业吹干造型</li>
+                            <li>耳朵清洁</li>
+                            <li>肛门腺清理</li>
+                            <li>指甲修剪</li>
+                            <li>脚底毛修剪</li>
+                        </ul>
+                        <a href="message.html" class="btn btn-primary">选择此套餐</a>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>尊享套餐</h3>
+                            <span class="package-price">¥198</span>
+                        </div>
+                        <ul class="package-features">
+                            <li>全身洗澡</li>
+                            <li>专业吹干造型</li>
+                            <li>耳朵清洁</li>
+                            <li>肛门腺清理</li>
+                            <li>指甲修剪</li>
+                            <li>脚底毛修剪</li>
+                            <li>SPA精油护理</li>
+                            <li>牙齿清洁</li>
+                        </ul>
+                        <a href="message.html" class="btn btn-outline">选择此套餐</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-process section-padding">
+            <div class="container">
+                <h2 class="section-title">服务流程</h2>
+                <p class="section-subtitle">专业规范的服务流程，让您放心托付</p>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>预约登记</h3>
+                            <p>线上或电话预约，登记宠物信息</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>健康检查</h3>
+                            <p>美容师检查宠物健康状况</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>专业洗护</h3>
+                            <p>使用专业产品进行洗护</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>造型修剪</h3>
+                            <p>根据需求进行造型修剪</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h3>完成交付</h3>
+                            <p>检查确认，交付爱宠</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-reviews section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">用户评价</h2>
+                <p class="section-subtitle">看看其他宠物主人怎么说</p>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop" alt="用户头像">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>小美妈妈</h4>
+                                <span class="review-date">2026-04-20</span>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">服务非常好，美容师很温柔，我家狗狗洗完香香的，造型也很漂亮！</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop" alt="用户头像">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>阿杰</h4>
+                                <span class="review-date">2026-04-18</span>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">环境干净整洁，工作人员很专业，猫咪洗完毛很顺滑，下次还会来！</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop" alt="用户头像">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>莉莉</h4>
+                                <span class="review-date">2026-04-15</span>
+                            </div>
+                            <div class="review-stars">★★★★☆</div>
+                        </div>
+                        <p class="review-text">性价比很高，套餐内容丰富，狗狗很享受整个过程，推荐！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section-padding">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>立即预约，享受专业服务</h2>
+                    <p>专业美容师团队，为您的爱宠提供贴心呵护</p>
+                    <a href="message.html" class="btn btn-white">立即预约</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>萌宠美容</h3>
+                    <p>专业宠物美容服务，为您的爱宠提供全方位的美容护理，让每一只宠物都能展现最美的一面。</p>
+                </div>
+                <div class="footer-links">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="service.html">服务介绍</a></li>
+                        <li><a href="store.html">门店信息</a></li>
+                        <li><a href="message.html">留言咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p>电话：400-888-8888</p>
+                    <p>地址：湖南幼儿师范高等专科学校</p>
+                    <p>营业时间：9:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 萌宠美容 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/service-detail.js"></script>
+</body>
+</html>

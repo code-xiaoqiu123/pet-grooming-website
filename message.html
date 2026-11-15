@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="萌宠美容 - 留言咨询">
+    <title>留言咨询 - 萌宠美容</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/message.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/04.png" alt="萌宠美容">
+                    <span class="logo-text">萌宠美容</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="service.html">服务介绍</a></li>
+                    <li><a href="store.html">门店信息</a></li>
+                    <li><a href="message.html" class="active">留言咨询</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="切换导航菜单">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a>
+                    <span>/</span>
+                    <span class="current">留言咨询</span>
+                </div>
+                <h1 class="page-title">留言咨询</h1>
+                <p class="page-subtitle">有任何问题或预约需求，欢迎随时联系我们</p>
+            </div>
+        </section>
+
+        <section class="message-section section-padding">
+            <div class="container">
+                <div class="message-grid">
+                    <div class="message-form-wrapper">
+                        <h2 class="form-title">在线咨询</h2>
+                        <p class="form-desc">请填写以下信息，我们将尽快与您联系</p>
+                        
+                        <form id="message-form" class="message-form">
+                            <div class="package-notice" id="package-notice">
+                                <div class="package-notice-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                        <polyline points="22 4 12 14.01 9 11.01"/>
+                                    </svg>
+                                </div>
+                                <div class="package-notice-content">
+                                    <h4>已选择套餐：<span id="selected-package-name"></span></h4>
+                                    <p>请填写以下信息完成预约</p>
+                                </div>
+                                <button type="button" class="package-notice-close" onclick="closePackageNotice()">&times;</button>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">
+                                        <span class="required">*</span> 您的姓名
+                                    </label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="请输入您的姓名" required>
+                                    <span class="error-message" id="name-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">
+                                        <span class="required">*</span> 联系电话
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="请输入您的手机号码" required>
+                                    <span class="error-message" id="phone-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pet-type" class="form-label">宠物类型</label>
+                                    <select id="pet-type" name="pet-type" class="form-select">
+                                        <option value="">请选择宠物类型</option>
+                                        <option value="dog">狗狗</option>
+                                        <option value="cat">猫咪</option>
+                                        <option value="other">其他</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pet-breed" class="form-label">宠物品种</label>
+                                    <input type="text" id="pet-breed" name="pet-breed" class="form-input" placeholder="如：金毛、布偶等">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="service-type" class="form-label">
+                                        <span class="required">*</span> 咨询类型
+                                    </label>
+                                    <select id="service-type" name="service-type" class="form-select" required>
+                                        <option value="">请选择咨询类型</option>
+                                        <option value="bath">宠物洗澡</option>
+                                        <option value="styling">造型修剪</option>
+                                        <option value="spa">SPA护理</option>
+                                        <option value="nail">指甲修剪</option>
+                                        <option value="other">其他咨询</option>
+                                    </select>
+                                    <span class="error-message" id="service-type-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="package" class="form-label">套餐选择</label>
+                                    <select id="package" name="package" class="form-select">
+                                        <option value="">请选择套餐</option>
+                                        <option value="basic">基础套餐 - ¥68</option>
+                                        <option value="standard">标准套餐 - ¥128</option>
+                                        <option value="premium">尊享套餐 - ¥198</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="appointment-date" class="form-label">期望预约日期</label>
+                                    <input type="date" id="appointment-date" name="appointment-date" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pet-breed" class="form-label">宠物品种</label>
+                                    <input type="text" id="pet-breed" name="pet-breed" class="form-input" placeholder="如：金毛、布偶等">
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="message" class="form-label">
+                                    <span class="required">*</span> 留言内容
+                                </label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="请详细描述您的需求或问题..." required></textarea>
+                                <span class="error-message" id="message-error"></span>
+                                <span class="char-count"><span id="char-count">0</span>/500</span>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    <span class="btn-text">提交留言</span>
+                                    <span class="btn-loading" style="display: none;">提交中...</span>
+                                </button>
+                                <button type="reset" class="btn btn-outline btn-large">重置表单</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-wrapper">
+                        <div class="contact-card">
+                            <h3 class="contact-title">联系方式</h3>
+                            <div class="contact-list">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-content">
+                                        <h4>电话咨询</h4>
+                                        <p>400-888-8888</p>
+                                        <p class="contact-time">营业时间：9:00 - 20:00</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                            <circle cx="12" cy="10" r="3"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-content">
+                                        <h4>门店地址</h4>
+                                        <p>湖南幼儿师范高等专科学校</p>
+                                        <p class="contact-time">地铁1号线A站B出口</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <polyline points="12 6 12 12 16 14"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-content">
+                                        <h4>营业时间</h4>
+                                        <p>周一至周日</p>
+                                        <p class="contact-time">9:00 - 20:00</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                            <polyline points="22,6 12,13 2,6"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-content">
+                                        <h4>电子邮箱</h4>
+                                        <p>service@mengchong.com</p>
+                                        <p class="contact-time">24小时内回复</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wechat-card">
+                            <h3 class="contact-title">微信公众号</h3>
+                            <div class="wechat-content">
+                                <div class="wechat-qrcode">
+                                    <img src="images/04.png" alt="微信公众号二维码">
+                                </div>
+                                <p>扫码关注，获取更多优惠信息</p>
+                            </div>
+                        </div>
+
+                        <div class="tips-card">
+                            <h3 class="contact-title">温馨提示</h3>
+                            <ul class="tips-list">
+                                <li>预约请提前1-2天，以便我们为您安排</li>
+                                <li>首次到店请携带宠物疫苗证明</li>
+                                <li>如有特殊需求请提前告知</li>
+                                <li>会员享受更多优惠，欢迎咨询</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">常见问题</h2>
+                <p class="section-subtitle">为您解答常见疑问</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>宠物美容需要多长时间？</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>根据服务类型不同，时间也有所差异。基础洗澡约60分钟，造型修剪约90分钟，SPA护理约120分钟。具体时间会根据宠物的体型和毛发状况有所调整。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>需要提前预约吗？</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>建议提前1-2天预约，这样可以确保为您安排合适的美容师和时间段。周末和节假日建议提前更多时间预约。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>宠物美容使用的产品安全吗？</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>我们使用的所有洗护产品均为进口天然成分，经过严格的安全检测，对宠物皮肤温和无刺激。如有特殊过敏情况，请提前告知我们。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>如何办理会员卡？</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>您可以在门店前台或通过电话办理会员卡。会员卡分为银卡、金卡和钻石卡，不同等级享受不同折扣和专属服务。首次消费即可办理。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section-padding">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>立即预约，享受专业服务</h2>
+                    <p>专业美容师团队，为您的爱宠提供贴心呵护</p>
+                    <a href="tel:400-888-8888" class="btn btn-white">电话咨询</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>萌宠美容</h3>
+                    <p>专业宠物美容服务，为您的爱宠提供全方位的美容护理，让每一只宠物都能展现最美的一面。</p>
+                </div>
+                <div class="footer-links">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="service.html">服务介绍</a></li>
+                        <li><a href="store.html">门店信息</a></li>
+                        <li><a href="message.html">留言咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p>电话：400-888-8888</p>
+                    <p>地址：湖南幼儿师范高等专科学校</p>
+                    <p>营业时间：9:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 萌宠美容 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+            </div>
+            <h3>提交成功！</h3>
+            <p>感谢您的留言，我们会尽快与您联系。</p>
+            <button class="btn btn-primary" onclick="closeModal()">确定</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

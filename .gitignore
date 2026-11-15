@@ -1,0 +1,10 @@
+# 文档和临时文件不上传
+*.docx
+*.doc
+# 根目录散落的设计图（已归类到 images/ 的除外，如有需要可自行调整）
+/3d784b12-f72f-4e68-8365-d1c88d1caa1a.png
+/83a3774c-d6c2-4002-bbec-78c357077255.png
+# 系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store
